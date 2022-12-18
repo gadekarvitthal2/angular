@@ -17,10 +17,11 @@ import { NewserviceService } from './services/newservice.service';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponent,custome, HomeComponent, ContactComponent
+    SampleComponent,custome, HomeComponent, ContactComponent, TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
