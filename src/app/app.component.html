@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post">
+
+            <div class="text-field">
+                <input type="text" id="username">
+                <label for="username">Login</label>
+            </div>
+            <div class="text-field">
+                <input type="text" id="password">
+                <label for="password">Password</label>
+            </div>
+            <div class="pass">Forgot Password</div>
+            <input type="submit" value="login">
+            <div class="signup_link">
+                Not a member?<a href="#">Signup</a>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html> -->
+<!-- <h1>akjsdlkf</h1> -->
+
+<a routerLink="sample/id/name" [queryParams]="{name:'1',city:'pune'}" 
+[fragment]="'phonenumber'"
+>Go-to-sample</a>
+<br><br>
+<a routerLink="contact/id/name">Go-to-contact</a>
+<button (click)="oncompile()">fdff</button>
+
+
+<div *ngIf="isShow">
+    <h1>Data showing in the app-component</h1>
+</div>
+<app-sample></app-sample>
+<router-outlet></router-outlet>
+
