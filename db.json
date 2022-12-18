@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "FirstName": "Vitthal",
+      "Lastname": "Gadekar",
+      "Email": "gadekar@gmail.com",
+      "Mobile_no": 7219039013,
+      "Sallary": 50000
+    },
+    {
+      "id": 2,
+      "FirstName": "Shyam",
+      "Lastname": "Gadekar",
+      "Email": "kartik@gmail.com",
+      "Mobile_no": 7420878060,
+      "Sallary": 60000
+    },
+    {
+      "id": 3,
+      "FirstName": "Raj",
+      "Lastname": "Chaudhari",
+      "Email": "Raj@gmail.com",
+      "Mobile_no": 9970690962,
+      "Sallary": 20000
+    },
+    {
+      "id": 4,
+      "FirstName": "archana",
+      "Lastname": "bhanot",
+      "Email": "archana@gmail.com",
+      "Mobile_no": 9999999999,
+      "Sallary": 50000
+    },
+    {
+      "id": 5,
+      "FirstName": "shubham",
+      "Lastname": "Gadekar",
+      "Email": "shubham@gmail.com",
+      "Mobile_no": 888888888,
+      "Sallary": 10000
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
