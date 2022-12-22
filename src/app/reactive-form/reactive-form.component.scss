@@ -1,0 +1,23 @@
+input[type='text']{
+  height: 37px;
+  width: 246px;
+}
+input[type='radio']{
+  height: 19px;
+  width: 19px;
+}
+.radio{
+display: flex;
+flex-direction: column;
+margin-left: 19px;
+}
+label{
+  font-size: 20px;
+  padding: 0px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 37vh;
+}

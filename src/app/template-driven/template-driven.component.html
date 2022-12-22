@@ -4,7 +4,7 @@
       <div class="col-lg-12">
         <div class="form-group">
           <label for="username">Enter Email</label>
-          <input class="form-control" type="text" id="email" name="email" ngModel required #email="ngModel">
+          <input class="form-control" type="text" id="email" name="email" ngModel required #email="ngModel" >
           <ng-container *ngIf="!email.valid && email.touched"><span>Please Enter Valid email</span></ng-container>
         </div>
         <div>
@@ -15,14 +15,22 @@
           </div>
         </div>
         <div class="form-group">
-          <select name="gender" class="form-select" id="gender" ngModel>
-            <option value="" selected>Select Gender</option>
-            <option value="Male" >Male</option>
+          <select name="gender" class="form-select" id="gender" ngModel="Male">
+            <option value="Male">Male</option>
             <option value="Female" >Female</option>
           </select>
         </div>
         <div>
           <button class="btn btn-primary" (click)="formDetails(form)">Submit</button>
+          <button class="btn btn-danger btn-sm" (click)="setValue()">Set/Patchvalue</button>
+        </div>
+        <div *ngIf="isSubmitted">
+          <h3>email:{{formRecord.email}}</h3>
+          <h3>password:{{formRecord.password}}</h3>
+          <h3>gender:{{formRecord.gender}}</h3>
+
+
+
         </div>
 
       </div>
