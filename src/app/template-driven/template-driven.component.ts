@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven',
@@ -10,6 +11,9 @@ export class TemplateDrivenComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  formDetails(element:NgForm){
+    console.log(element.form.value);
   }
 
 }

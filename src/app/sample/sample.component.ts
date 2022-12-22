@@ -28,25 +28,25 @@ export class SampleComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     //  this.unSubscribeData= interval(1000).subscribe((data:any)=>{console.log(data)});
 
-    let newonserbavle = Observable.create((data: any) => {
-      let counter = 0;
-      setInterval(() => {
-        counter++
-        data.next(counter);
-        if (counter > 4) {
-          data.error('conunter is greter than 3')
-        };
-        if (counter > 3) {
-          data.complete();
-        }
-      }, 1000)
-    })
+    // let newonserbavle = Observable.create((data: any) => {
+    //   let counter = 0;
+    //   setInterval(() => {
+    //     counter++
+    //     data.next(counter);
+    //     if (counter > 4) {
+    //       data.error('conunter is greter than 3')
+    //     };
+    //     if (counter > 3) {
+    //       data.complete();
+    //     }
+    //   }, 1000)
+    // })
 
-    newonserbavle.pipe(filter((data:any):any=>{if(data>2)
-      return true;
-    }),map((data:any)=>'conter is '+(data))).subscribe((data: any) => {
-      console.log(data), (error: any) => console.log(error), () => console.log('data')
-    })
+    // newonserbavle.pipe(filter((data:any):any=>{if(data>2)
+    //   return true;
+    // }),map((data:any)=>'conter is '+(data))).subscribe((data: any) => {
+    //   console.log(data), (error: any) => console.log(error), () => console.log('data')
+    // })
   }
   ngOnDestroy(): void {
     // this.unSubscribeData?.unsubscribe();
@@ -60,7 +60,7 @@ export class SampleComponent implements OnInit, OnDestroy {
     // console.log(this.actroute.snapshot.paramMap.get('id'))
 
     // console.log(this.actroute.snapshot.paramMap.get('name'));
-    this.unSubscribeData?.unsubscribe();
+    // this.unSubscribeData?.unsubscribe();
   }
 
 

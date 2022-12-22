@@ -14,13 +14,13 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  goToSample(){
-    //this.route.navigate(['sample','id','name'],{queryParams:{ id:'1',name:'vitthal'},fragment:'phone'})
-  //this.route.navigate(['sample','id','name'],{queryParams:{id:'1',name:'sample'},fragment:'phychology'})
-  this.route.navigate(['sample','id','name'],{queryParams:{id:'225',name:'hindustani bhau'},fragment:'fragmentSample'})
-  }
+  // goToSample(){
+  //   //this.route.navigate(['sample','id','name'],{queryParams:{ id:'1',name:'vitthal'},fragment:'phone'})
+  // //this.route.navigate(['sample','id','name'],{queryParams:{id:'1',name:'sample'},fragment:'phychology'})
+  // this.route.navigate(['sample','id','name'],{queryParams:{id:'225',name:'hindustani bhau'},fragment:'fragmentSample'})
+  // }
   showThedata(){
-this.service.onDataChange();
+// this.service.onDataChange();
   }
 
 }

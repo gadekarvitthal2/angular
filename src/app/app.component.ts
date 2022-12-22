@@ -16,15 +16,15 @@ isShow:boolean=false;
 
   }
 ngOnInit(): void {
-  this.service.Subscription.subscribe(data=>{
-    this.isShow=data
-  })
-}  
-oncompile(){
-  this.service.onclick();
-
+  // this.service.Subscription.subscribe(data=>{
+  //   this.isShow=data
+  // })
 }
+// oncompile(){
+//   this.service.onclick();
 
- 
-  
+// }
+
+
+
 }

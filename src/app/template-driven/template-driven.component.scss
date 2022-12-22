@@ -1,0 +1,30 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  // width: 100vh;
+  // height: 100vw;
+}
+.container-fluid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35vh;
+
+}
+input , .form-select{
+  width: 182%;
+  height: 34px;
+  font-size: 15px;
+}
+label{
+  font-size: 20px;
+}
+button{
+  height: 31px;
+  width: 68px;
+}
+input.ng-touched.ng-invalid{
+  border: 1px solid red;
+}
