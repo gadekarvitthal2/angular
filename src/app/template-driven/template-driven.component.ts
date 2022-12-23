@@ -32,10 +32,10 @@ export class TemplateDrivenComponent implements OnInit {
 
   setValue() {
     this.formInfo.form.patchValue({
-      vitthal: {
+      userdata: {
         email: 'vitthal@gmail.com',
         password: '123456',
-      },
+      },gender:'male'
     });
   }
 }

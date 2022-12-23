@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-warning" (click)="onAddData()">Add data</button>
+            <div>
+              <h4>{{asyncPipeData | async}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="filterString">
+      <div *ngFor="let user of userArray | filterpipe:filterString">
+        <h3>{{user.name}}</h3>
+        <h3>{{user.date |date:'short'}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,10 +19,12 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
+import { FilterpipePipe } from './filterpipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponent,custome, HomeComponent, ContactComponent, TemplateDrivenComponent, ReactiveFormComponent
+    SampleComponent,custome, HomeComponent, ContactComponent, TemplateDrivenComponent, ReactiveFormComponent, FilterPipeComponent, FilterpipePipe
   ],
   imports: [
     BrowserModule,

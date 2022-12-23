@@ -1,22 +1,37 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <form [formGroup]="forms">
+      <form [formGroup]="formGroups">
+      <div formGroupName="userdata">
         <div class="form-group" >
           <label for="email" >Enter Email</label>
-          <input type="text" id="email" class="form-control" formControlName="email">
+          <input type="text" id="email" class="form-control" formControlName="email" >
+          <span class="help-block" *ngIf="!formGroups.get('userdata.email')?.valid && formGroups.get('userdata.email')?.touched">
+            <span *ngIf="formGroups.get('userdata.email')?.errors?.['required']">Required Fields</span>
+            <span *ngIf="formGroups.get('userdata.email')?.errors?.['isRestrictedName']">Enter valid name</span>
+          </span>
         </div>
         <div class="form-group">
           <label for="password" >Enter password</label>
           <input type="text" id="password" class="form-control" formControlName="password">
+          <span class="help-block" *ngIf="!formGroups.get('userdata.password')?.valid && formGroups.get('userdata.password')?.touched">
+
+          </span>
         </div>
+      </div>
         <div class="form-group " >
           <label for="gender" >Select Gender</label>
           <div *ngFor="let gender of genders" class='radio'>
             <input type="radio" [value]="gender" formControlName="gender"><h4>{{gender}}</h4>
           </div>
+          <div formArrayName="hobbies">
+          <div *ngFor="let contro of controlValues;let i =index">
+            <input type="text" [formControlName]="i">
+          </div>
+        </div>
           <div>
-            <button (click)="formsdata(forms.value)" class="btn btn-primary"> Submit</button>
+            <button (click)="formsdata(formGroups.value)" class="btn btn-primary"> Submit</button>
+            <button (click)="onAddControls()" class="btn btn-warning">Add controls</button>
           </div>
         </div>
       </form>

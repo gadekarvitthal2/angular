@@ -1,6 +1,7 @@
 input[type='text']{
   height: 37px;
   width: 246px;
+  font-size: 20px;
 }
 input[type='radio']{
   height: 19px;
@@ -19,5 +20,12 @@ label{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 37vh;
+  margin-top: 30vh;
+}
+.help-block{
+  font-size: 15px;
+  color: red;
+}
+input.ng-touched.ng-invalid{
+border: 1px solid red;
 }
