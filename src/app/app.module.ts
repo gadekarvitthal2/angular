@@ -21,14 +21,15 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
 import { FilterpipePipe } from './filterpipe.pipe';
+import { PostdataComponent } from './postdata/postdata.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponent,custome, HomeComponent, ContactComponent, TemplateDrivenComponent, ReactiveFormComponent, FilterPipeComponent, FilterpipePipe
+    SampleComponent,custome, HomeComponent, ContactComponent, TemplateDrivenComponent, ReactiveFormComponent, FilterPipeComponent, FilterpipePipe, PostdataComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule,
+    AppRoutingModule,ReactiveFormsModule,HttpClientModule,
     NgbModule,FormsModule,HttpClientModule,Ng2SearchPipeModule,Ng2OrderModule,NgxPaginationModule,CommonModule,RouterModule.forRoot([])
   ],
   providers: [SharedDataService,NewserviceService],

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="formData">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" formControlName="title"/>
+      </div>
+      <div class="form-group">
+        <label for="About">About</label>
+        <textarea type="text" class="form-control" id="About" formControlName="about"></textarea>
+      </div>
+      <div>
+        <button (click)="onSubmit(formData)" class="btn btn-primary">Submit</button>
+      </div>
+
+      <div>
+        <table>
+          <div *ngFor="let item of postman ;let i = index">
+            <tr *ngFor="let data of item | keyvalue">
+            <td>{{data.key}}</td>
+            <td>{{data.value}}</td>
+            </tr>
+          </div>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <table>
+            <tr *ngFor="let ele of postman">
+              <td>{{ele.about}}</td>
+              <td>{{ele.title}}</td>
+            </tr>
+          </table>
+          <div class="col-md-3">
+            <button class="btn btn-primary" (click)="onclearData()">clear Record</button>
+          </div>
+          <div class="col-md-3">
+           <button class="btn btn-warning" (click)="GetDataRestricted()" >GetData</button>
+          <div *ngIf="error">
+            <h5>{{error}}</h5>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
