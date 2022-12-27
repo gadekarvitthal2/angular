@@ -1,19 +1,45 @@
 <!-- <div class="container">
     <div class="row">
         <div class="col flex">
-            <a class='nav-item' routerLink="/" 
+            <a class='nav-item' routerLink="/"
           >home</a><br>
             <a routerLink="contact">contact</a><br>
             <a [routerLink]="['sample/id/name']">sample</a><br>
         </div>
-            
+
         <div>
             <button (click)="navigate()">navigate here</button>
         </div>
         {{user.name}}
         {{user.id}}
         <router-outlet></router-outlet>
-     
+
     </div>
 </div> -->
+<div *ngIf="!isAuthenticated" class="mb-3">
+  <button class="btn btn-success">Login</button>
+</div>
+<div *ngIf="isAuthenticated">
+<button class="btn btn-danger">Logout</button>
+</div>
+<div *ngIf="isAuthenticated">
+<div class="flex-container">
+  <div class="flex-item-left">
 
+     <h1>Español: Una Caminata</h1>
+
+    <img src="https://assets.codepen.io/1858834/dennis-schrader-via_unsplash-ciudad-mexico.jpg" alt="una ciudad en mexico" />
+
+
+  </div>
+  <div class="flex-item-right">
+
+     <h2>Sobre Mi</h2>
+     <p>filler</p>
+     <hr>
+     <h2>Mis Tutores</h2>
+     <p>filler</p>
+     <hr>
+  </div>
+</div>
+</div>

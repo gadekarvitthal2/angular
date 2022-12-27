@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PostService } from '../post.service';
 import { SharedDataService } from '../services/shared-data.service';
 
 @Component({
@@ -9,18 +10,15 @@ import { SharedDataService } from '../services/shared-data.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service:SharedDataService,private router:Router,private actroute:ActivatedRoute) { }
-   show:string='home'
+  constructor(private service:SharedDataService,private router:Router,private actroute:ActivatedRoute,private authService:PostService) { }
+   show:string='home';
+   isAuthenticated:boolean=false;
    user:any;
   ngOnInit(): void {
-    this.service.sharedData.subscribe(data=>{alert(data)
-    this.show+=data}
-    );
-    debugger
-    
-  
-     
-      
+      this.authService.userSub.subscribe(item =>{
+        console.log(item);
+        this.isAuthenticated=item ? true : false;
+      })
   }
   navigate(){
       // this.router.navigate(['sample']);
@@ -29,7 +27,7 @@ export class HomeComponent implements OnInit {
       // this.user={
       //   id:this.actroute.snapshot.paramMap.get('id'),
       //   name:this.actroute.snapshot.paramMap.get('name')
-    
+
       // }
       // alert(`the id and params is ${this.user.name} ${this.user.id}`)
   }

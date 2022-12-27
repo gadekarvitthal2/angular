@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { sample } from 'rxjs';
+import { AppComponent } from './app.component';
+import { AuthComponent } from './auth/auth.component';
 import { ContactComponent } from './contact/contact.component';
 import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
 import { PostdataComponent } from './postdata/postdata.component';
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path:'reactiveform',component:ReactiveFormComponent},
   {path:'filterpipe',component:FilterPipeComponent},
   {path:'postdata',component:PostdataComponent},
+  {path:'auth',component:AuthComponent },
+  {path:'',component:AppComponent},
   {path:'contact/:id/:name',component:ContactComponent}
 ];
 
